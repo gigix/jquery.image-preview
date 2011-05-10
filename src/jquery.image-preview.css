@@ -12,3 +12,7 @@
     height: 300px;
     border: none;
 }
+
+#previewBox.hideAll, #previewBox .hideAll {
+	display: none;
+}

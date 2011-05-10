@@ -72,6 +72,9 @@
 
     $.fn.leftOfPreviewBox = function(targetElement){
         var previewBoxLeftBoundary = $(targetElement).getX() - (this.width() - $(targetElement).width()) / 2;
+		if (previewBoxLeftBoundary < 0) {
+			previewBoxLeftBoundary = 0;
+		}
         if (previewBoxLeftBoundary + this.width() > rightBoundary($.boundaryElement)) {
             previewBoxLeftBoundary = rightBoundary($.boundaryElement) - this.width();
         }
@@ -91,7 +94,8 @@
         this.mouseenter(function(e) {	
             var targetElement = e.target;
 
-            var content = buildContent(this);
+            var content = buildContent($(this));
+
             content.attr('id', 'previewContent');
             $.previewBox.find('#previewContent').replaceWith(content);
 
