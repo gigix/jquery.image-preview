@@ -1,0 +1,14 @@
+#previewBox {
+    width: 310px;
+    height: 310px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    margin: 5px;
+    padding: 5px 0 0 5px;
+    border: 1px solid #DFDFDF;
+}
+
+#previewBox img {
+    width: 300px;
+    height: 300px;
+    border: none;
+}

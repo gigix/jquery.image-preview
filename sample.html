@@ -1,0 +1,64 @@
+<html>
+	<head>
+		<style>
+			ul {
+			    list-style: none outside none;
+			}
+			li.thumbnail {
+			    float: left;
+			    height: 260px;
+			    margin: 0 15px 14px 0;
+			    overflow: hidden;
+			    width: 160px;
+			}
+			.thumbnail div.container {
+			    background: none repeat scroll 0 0 #F6F4F4;
+			    border: 1px solid #DDDDDD;
+			    height: 160px;
+			    line-height: 158px;
+			    text-align: center;
+			    width: 160px;
+			}
+			.thumbnail div.container img {
+			    margin-top: 30px;
+			}
+		</style>
+		<link href="src/jquery.image-preview.css" media="screen" rel="stylesheet" type="text/css" />
+		<script src="lib/jquery-1.5.1.min.js"></script>
+		<script src="src/jquery.image-preview.js"></script>
+	</head>
+	
+	<body>
+		<script>
+			$(function() {				
+				$(".listItem .thumbnail .container. img").preview({
+					'boundaryElement' : $('body'),
+					'buildContent' : function(target) { return target.html().replace("thumbnail.jpg", "preview.jpg"); }
+				});
+			});
+		</script>
+		
+		<ul class="listItem">
+			<li class="thumbnail">
+			    <div class="container">
+		          <img src="http://media.lonelyplanet.com/lpimg/29093/29093-138/thumbnail.jpg" alt="" />
+			    </div>
+			</li>
+			<li class="thumbnail">
+			    <div class="container">
+		          <img src="http://media.lonelyplanet.com/lpimg/28104/28104-4/thumbnail.jpg" alt="" />
+			    </div>
+			</li>
+			<li class="thumbnail">
+			    <div class="container">
+		          <img src="http://media.lonelyplanet.com/lpimg/15014/15014-16/thumbnail.jpg" alt="" />
+			    </div>
+			</li>
+			<li class="thumbnail">
+			    <div class="container">
+		          <img src="http://media.lonelyplanet.com/lpimg/28983/28983-49/thumbnail.jpg" alt="" />
+			    </div>
+			</li>
+    	</ul>
+	</body>
+</html>

@@ -88,7 +88,7 @@
         $.boundaryElement = options['boundaryElement'];
         var buildContent = options['buildContent'];
 
-        this.mouseenter(function(e) {
+        this.mouseenter(function(e) {	
             var targetElement = e.target;
 
             var content = buildContent(this);
